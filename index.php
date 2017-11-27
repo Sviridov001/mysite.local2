@@ -54,7 +54,6 @@ define(PATH_LOG, 'path.log');
       </li>
       <li><a href='eshop/catalog.php'>Магазин</a>
       </li>
-      </li>
       <li><a href='index.php?id=log'>Журнал посещений</a>
       </li>
     </ul>
