@@ -1,0 +1,282 @@
+{\rtf1\ansi\ansicpg1251\deff0\deflang1049{\fonttbl{\f0\fswiss\fcharset0 Consolas;}{\f1\fswiss\fcharset204 Consolas;}{\f2\fswiss\fcharset204 Cambria;}{\f3\fnil\fcharset204 Calibri;}{\f4\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red255\green128\blue0;\red0\green0\blue0;\red0\green0\blue186;\red0\green119\blue0;\red221\green0\blue0;\red0\green0\blue255;\red22\green54\blue93;}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\ri-448\tx9088\cf1\lang1033\f0\fs26\par
+\cf2\lang1049\f1\fs36\'c7\'e0\'e3\'ee\'eb\'ee\'e2\'ea\'e8, \'f0\'e0\'e1\'ee\'f2\'e0 \'f1 \'e7\'e0\'e3\'ee\'eb\'ee\'e2\'ea\'e0\'ec\'e8\lang1033\f0\par
+\par
+#\lang1049\f1\'ca\'f3\'ea\'e8, \lang1033\f0 Cookie\cf1\fs26\par
+\par
+// \u1057?\u1086?\u1079?\u1076?\u1072?\u1085?\u1080?\u1077? \u1074?\u1088?\u1077?\u1084?\u1077?\u1085?\u1085?\u1086?\u1081? cookie\par
+\cf3 setcookie\cf4 (\cf5 "name"\cf4 , \cf5 "John"\cf4 );\par
+\pard\ri-22\cf1 // \u1057?\u1086?\u1079?\u1076?\u1072?\u1085?\u1080?\u1077? \u1076?\u1086?\u1083?\u1075?\u1086?\u1074?\u1088?\u1077?\u1084?\u1077?\u1085?\u1085?\u1086?\u1081? cookie \u1085?\u1072? \u1086?\u1076?\u1080?\u1085? \u1095?\u1072?\u1089?\par
+\pard\ri-448\tx9088\cf3 setcookie\cf4 (\cf5 "name"\cf4 , \cf5 "John"\cf4 , \cf3\b time\cf4 ()+\cf3 3600\cf4\b0 );\par
+\cf1 // Cookie \u1076?\u1086?\u1089?\u1090?\u1091?\u1087?\u1085?\u1099? \u1086?\u1076?\u1080?\u1085? \u1095?\u1072?\u1089? \u1087?\u1086? \u1087?\u1091?\u1090?\u1080? /docs/\par
+\cf3 setcookie\cf4 (\cf5 "name"\cf4 , \cf5 "John"\cf4 , \cf3 time\cf4 ()+\cf3 3600\cf4 , \cf5 "\b /docs/\b0 "\cf4 );\par
+\cf1 // Cookie \u1076?\u1086?\u1089?\u1090?\u1091?\u1087?\u1085?\u1099? \u1086?\u1076?\u1080?\u1085? \u1095?\u1072?\u1089? \u1087?\u1086? \u1087?\u1091?\u1090?\u1080? \u1076?\u1083?\u1103? \u1074?\u1089?\u1077?\u1093? \u1087?\u1086?\u1076?\u1076?\u1086?\u1084?\u1077?\u1085?\u1086?\u1074?\par
+\cf3 setcookie\cf4 (\cf5 "name"\cf4 , \cf5 "John"\cf4 , \cf3 time\cf4 ()+\cf3 3600\cf4 , \cf5 "/"\cf4 , \cf5 "\b .example.com\b0 "\cf4 );\par
+\cf1 // \u1057?ookie \u1084?\u1086?\u1078?\u1085?\u1086? \u1086?\u1090?\u1076?\u1072?\u1074?\u1072?\u1090?\u1100? \u1090?\u1086?\u1083?\u1100?\u1082?\u1086? \u1087?\u1088?\u1080? https\par
+\cf3 setcookie\cf4 (\cf5 "name"\cf4 , \cf5 "John"\cf4 , \cf3 time\cf4 ()+\cf3 3600\cf4 , \cf5 "/"\cf4 , \cf5 ".example.com"\cf4 , \cf3\b true\cf4\b0 );\par
+\cf1 // \u1057?ookie \u1084?\u1086?\u1078?\u1085?\u1086? \u1086?\u1090?\u1076?\u1072?\u1074?\u1072?\u1090?\u1100? \u1090?\u1086?\u1083?\u1100?\u1082?\u1086? \u1087?\u1088?\u1080? http \u1079?\u1072?\u1087?\u1088?\u1086?\u1089?\u1077?\par
+\cf3 setcookie\cf4 (\cf5 "name"\cf4 , \cf5 "John"\cf4 , \cf3 time\cf4 ()+\cf3 3600\cf4 , \cf5 "/"\cf4 , \cf5 ".example.com"\cf4 , \cf3 false, \b true\cf4\b0 );\par
+\cf1 // \u1042?\u1085?\u1080?\u1084?\u1072?\u1085?\u1080?\u1077?: \u1086?\u1096?\u1080?\u1073?\u1082?\u1072?!\par
+\cf4 echo "\u1055?\u1088?\u1080?\u1074?\u1077?\u1090?!";\par
+\cf3 setcookie\cf4 (\cf5 "name"\cf4 , \cf5 "John"\cf4 );\par
+\cf1 // \u1063?\u1090?\u1077?\u1085?\u1080?\u1077? cookie\par
+\cf4 echo \cf3 $_COOKIE\cf4 [\cf5 "name"\cf4 ];\par
+\cf1 // \u1059?\u1076?\u1072?\u1083?\u1077?\u1085?\u1080?\u1077? cookie\par
+\pard\ri-448\sa200\sl276\slmult1\tx9088\cf3 setcookie\cf4 (\cf5 "name"\cf4 , \cf5 "John"\cf4 , \cf3\b time\cf4 ()-\cf3 3600\cf4\b0 );\par
+\pard\ri-448\tx9088\cf1 // \u1059?\u1076?\u1072?\u1083?\u1077?\u1085?\u1080?\u1077? cookie\par
+\cf3 setcookie\cf4 (\cf5 "name"\cf4 , \cf5 "John"\cf4 , \cf3\b time\cf4 ()-\cf3 3600\cf4\b0 );\par
+\cf1 // \u1052?\u1072?\u1089?\u1089?\u1080?\u1074?\u1099? \u1080? cookie\par
+\cf3 $user \cf4 = [\par
+\cf5 'name'\cf4 => \cf5 'John'\cf4 ,\par
+\cf5 'login'\cf4 => \cf5 'root'\cf4 ,\par
+\cf5 'password'\cf4 => \cf5 '1234'\par
+\cf4 ];\par
+\cf3 $str \cf4 = \cf3\b serialize\cf4\b0 (\cf3 $user\cf4 );\par
+\cf3 setcookie\cf4 (\cf5 "user"\cf4 , \cf3 $str\cf4 );\par
+\cf3 $user \cf4 = \cf3\b unserialize\cf4\b0 (\cf3 $_COOKIE\cf4 [\cf5 "user"\cf4 ]);\par
+\cf3 print_r\cf4 (\cf3 $user\cf4 );\par
+\cf1 // \u1044?\u1083?\u1103? \u1089?\u1086?\u1093?\u1088?\u1072?\u1085?\u1077?\u1085?\u1080?\u1103? \u1094?\u1077?\u1083?\u1086?\u1089?\u1090?\u1085?\u1086?\u1089?\u1090?\u1080?\par
+\cf3 $str \cf4 = \cf3\b base64_encode\cf4\b0 ( \cf3 serialize\cf4 (\cf3 $user\cf4 ) );\par
+\pard\ri-448\sa200\sl276\slmult1\tx9088\cf3 setcookie\cf4 (\cf5 "user"\cf4 , \cf3 $str\cf4 );\par
+\pard\ri-448\tx9088\cf3 $user \cf4 = \cf3 unserialize\cf4 ( \cf3\b base64_decode\cf4\b0 (\cf3 $_COOKIE\cf4 [\cf5 "user"\cf4 ]) );\par
+\pard\ri-448\sa200\sl276\slmult1\tx9088\cf3 print_r\cf4 (\cf3 $user\cf4 ); \par
+\par
+\fs36 #\lang1049\f1\'cf\'e5\'f0\'e5\'e0\'e4\'f0\'e5\'f1\'e0\'f6\'e8\'ff, \'cf\'e5\'f0\'e5\'e7\'e0\'ef\'f0\'ee\'f1\fs26\par
+\pard\cf1\lang1033\f0 //\u1055?\u1077?\u1088?\u1077?\u1072?\u1076?\u1088?\u1077?\u1089?\u1072?\u1094?\u1080?\u1103? \u1089?\u1086? \u1089?\u1090?\u1072?\u1090?\u1091?\u1089?\u1086?\u1084? 302\par
+\cf3 header\cf4 (\cf5 "Location: \cf0{\field{\*\fldinst{HYPERLINK "http://mysite.local"}}{\fldrslt{\ul\cf6 http://mysite.local}}}\cf5\f0\fs26 "\cf4 );\cf2\par
+\cf1 //\u1055?\u1077?\u1088?\u1077?\u1072?\u1076?\u1088?\u1077?\u1089?\u1072?\u1094?\u1080?\u1103? \u1089?\u1086? \u1089?\u1090?\u1072?\u1090?\u1091?\u1089?\u1086?\u1084? 301\par
+\cf3 header\cf4 (\cf5 "HTTP/1.1 301 MovedPermanently"\cf4 );\par
+\cf3 header\cf4 (\cf5 "Location: \cf0{\field{\*\fldinst{HYPERLINK "http://mysite.local"}}{\fldrslt{\ul\cf6 http://mysite.local}}}\cf5\f0\fs26 "\cf4 );\cf2\par
+\cf1 //\u1048?\u1083?\u1080?\par
+\cf3 header\cf4 (\cf5 "Location: \cf0{\field{\*\fldinst{HYPERLINK "http://mysite.local"}}{\fldrslt{\ul\cf6 http://mysite.local}}}\cf5\f0\fs26 "\cf4 , \cf3 true\cf4 , \cf3 301\cf4 );\cf2\par
+\cf1 //\u1055?\u1077?\u1088?\u1077?\u1079?\u1072?\u1087?\u1088?\u1086?\u1089? \u1088?\u1077?\u1089?\u1091?\u1088?\u1089?\u1072?\par
+\cf3 header("Refresh: 3");\par
+\pard\ri-448\sa200\sl276\slmult1\tx9088 header\cf4 (\cf5 "Refresh: 3;url=\cf2 http://mysite.local\cf5 "\cf4 );\par
+\cf7\lang1049\f2\fs36\'d3\'f1\'f2\'e0\'ed\'ee\'e2\'ea\'e0 \'f2\'e8\'ef\'e0 \'f1\'ee\'e4\'e5\'f0\'e6\'e8\'ec\'ee\'e3\'ee \cf4\lang1033\f0\fs26\par
+\pard\cf1 //\u1055?\u1088?\u1080?\u1085?\u1091?\u1076?\u1080?\u1090?\u1077?\u1083?\u1100?\u1085?\u1072?\u1103? \u1091?\u1089?\u1090?\u1072?\u1085?\u1086?\u1074?\u1082?\u1072? \u1090?\u1080?\u1087?\u1072? \u1087?\u1077?\u1088?\u1077?\u1076?\u1072?\u1074?\u1072?\u1077?\u1084?\u1086?\u1075?\u1086? \u1088?\u1077?\u1089?\u1091?\u1088?\u1089?\u1072?\par
+\cf3 header\cf4 (\cf5 "Content-Type: text/xml"\cf4 );\par
+\cf1 //\u1055?\u1088?\u1080?\u1085?\u1091?\u1076?\u1080?\u1090?\u1077?\u1083?\u1100?\u1085?\u1072?\u1103? \u1091?\u1089?\u1090?\u1072?\u1085?\u1086?\u1074?\u1082?\u1072? \u1082?\u1086?\u1076?\u1080?\u1088?\u1086?\u1074?\u1082?\u1080? \u1087?\u1077?\u1088?\u1077?\u1076?\u1072?\u1074?\u1072?\u1077?\u1084?\u1086?\u1075?\u1086? \u1088?\u1077?\u1089?\u1091?\u1088?\u1089?\u1072?\par
+\cf3 header\cf4 (\cf5 "Content-Type: text/html;charset=utf-8"\cf4 );\par
+\cf1 //\u1055?\u1077?\u1088?\u1077?\u1085?\u1072?\u1087?\u1088?\u1072?\u1074?\u1083?\u1077?\u1085?\u1080?\u1077? \u1074?\u1099?\u1074?\u1086?\u1076?\u1072? \u1087?\u1077?\u1088?\u1077?\u1076?\u1072?\u1074?\u1072?\u1077?\u1084?\u1099?\u1093? \u1076?\u1072?\u1085?\u1085?\u1099?\u1093?\par
+\cf3 header\cf4 (\cf5 "Content-Type: text/plain"\cf4 );\par
+\pard\ri-448\sa200\sl276\slmult1\tx9088\cf3 header\cf4 (\cf5 "Content-Disposition: attachment;filename=\\"myfile.txt\\""\cf4 );\par
+\cf7\lang1049\f2\fs52\'d3\'ef\'f0\'e0\'e2\'eb\'e5\'ed\'e8\'e5 \'ea\'fd\'f8\'e8\'f0\'ee\'e2\'e0\'ed\'e8\'e5\'ec \par
+\pard\cf1\lang1033\f0\fs26 //\u1047?\u1072?\u1087?\u1088?\u1077?\u1090? \u1082?\u1101?\u1096?\u1080?\u1088?\u1086?\u1074?\u1072?\u1085?\u1080?\u1103?\par
+\cf3 header\cf4 (\cf5 "Cache-Control: no-cache, max-age=0"\cf4 );\par
+\cf1 //\u1055?\u1086?\u1083?\u1085?\u1099?\u1081? \u1079?\u1072?\u1087?\u1088?\u1077?\u1090? \u1082?\u1101?\u1096?\u1080?\u1088?\u1086?\u1074?\u1072?\u1085?\u1080?\u1103?\par
+\cf3 header\cf4 (\cf5 "Cache-Control: no-store"\cf4 );\par
+\cf1 //\u1056?\u1072?\u1079?\u1088?\u1077?\u1096?\u1077?\u1085?\u1080?\u1077? \u1082?\u1101?\u1096?\u1080?\u1088?\u1086?\u1074?\u1072?\u1085?\u1080?\u1103? \u1085?\u1072? \u1086?\u1076?\u1080?\u1085? \u1095?\u1072?\u1089? \u1086?\u1090?\u1085?\u1086?\u1089?\u1080?\u1090?\u1077?\u1083?\u1100?\u1085?\u1086? \u1074?\u1088?\u1077?\u1084?\u1077?\u1085?\u1080? \u1079?\u1072?\u1087?\u1088?\u1086?\u1089?\u1072?\par
+\cf3 header\cf4 (\cf5 "Cache-Control: max-age=3600"\cf4 );\par
+\cf1 //\u1056?\u1072?\u1079?\u1088?\u1077?\u1096?\u1077?\u1085?\u1080?\u1077? \u1082?\u1101?\u1096?\u1080?\u1088?\u1086?\u1074?\u1072?\u1085?\u1080?\u1103? \u1085?\u1072? \u1086?\u1076?\u1080?\u1085? \u1095?\u1072?\u1089?\par
+\pard\ri-448\sa200\sl276\slmult1\tx9088\cf3 header\cf4 (\cf5 "Expires: " \cf4 . \cf3 date\cf4 (\cf5 "r"\cf4 ,\cf3 time\cf4 ()+\cf3 3600\cf4 );\par
+\cf7\lang1049\f2\fs52\'c1\'f3\'f4\'e5\'f0\'e8\'e7\'e0\'f6\'e8\'ff \'e2\'fb\'e2\'ee\'e4\'e0 \par
+\pard\cf1\f1\fs26 //\'c2\'ea\'eb\'fe\'f7\'e0\'e5\'ec \'e1\'f3\'f4\'e5\'f0\'e8\'e7\'e0\'f6\'e8\'fe\par
+\cf3 ob_start\cf4 ();echo \cf5 'Hello world!'\cf4 ;\cf3 setcookie\cf4 (\cf5 "name"\cf4 , \cf5 "John"\cf4 );\par
+\cf1 //\'cf\'ee\'f1\'fb\'eb\'e0\'e5\'ec \'f1\'ee\'e4\'e5\'f0\'e6\'e8\'ec\'ee\'e5 \'e1\'f3\'f4\'e5\'f0\'e0\par
+\cf3 ob_flush();\par
+\cf4 echo '\'c5\'f9\'b8 \'ea\'ee\'ed\'f2\'e5\'ed\'f2!';\par
+echo '\'c8 \'e5\'f9\'b8 \'ea\'ee\'ed\'f2\'e5\'ed\'f2!';\par
+\cf1 //\'cf\'ee\'f1\'fb\'eb\'e0\'e5\'ec \'f1\'ee\'e4\'e5\'f0\'e6\'e8\'ec\'ee\'e5 \'e1\'f3\'f4\'e5\'f0\'e0 \'e8 \'ee\'f2\'ea\'eb\'fe\'f7\'e0\'e5\'ec \'e5\'e3\'ee\par
+\cf3 ob_end_flush\cf4 ();\par
+\cf1 //\'c2\'ea\'eb\'fe\'f7\'e0\'e5\'ec \'e1\'f3\'f4\'e5\'f0\'e8\'e7\'e0\'f6\'e8\'fe\par
+\cf3 ob_start();\par
+\cf4 echo "Hello ";\par
+\cf1 //\'c2\'fb\'e1\'e8\'f0\'e0\'e5\'ec \'f2\'ee, \'f7\'f2\'ee \'ed\'e0\'f5\'ee\'e4\'e8\'f2\'f1\'ff \'e2 \'e1\'f3\'f4\'e5\'f0\'e5. \'c5\'e3\'ee \'f1\'ee\'e4\'e5\'f0\'e6\'e8\'ec\'ee\'e5 \'ed\'e0 \'ee\'f7\'e8\'f9\'e0\'e5\'f2\'f1\'ff!\par
+\cf3 $out1 \cf4 = \cf3 ob_get_contents\cf4 ();\par
+echo "World";\par
+\cf1 //\'c2\'fb\'e1\'e8\'f0\'e0\'e5\'ec \'f2\'ee, \'f7\'f2\'ee \'ed\'e0\'f5\'ee\'e4\'e8\'f2\'f1\'ff \'e2 \'e1\'f3\'f4\'e5\'f0\'e5. \'c5\'e3\'ee \'f1\'ee\'e4\'e5\'f0\'e6\'e8\'ec\'ee\'e5 \'ed\'e0 \'ee\'f7\'e8\'f9\'e0\'e5\'f2\'f1\'ff!\par
+\cf3 $out2 \cf4 = \cf3 ob_get_contents\cf4 ();\par
+\cf1 //\'c0 \'f2\'e5\'ef\'e5\'f0\'fc \'ee\'f7\'e8\'f9\'e0\'e5\'ec \'e1\'f3\'f4\'e5\'f0, \'ed\'ee \'ed\'e5 \'e7\'e0\'ea\'f0\'fb\'e2\'e0\'e5\'ec\par
+\cf3 ob_clean();\par
+\cf4 echo "\'d1\'e0\'f8\'e0";\par
+echo "\'e8 ";\par
+echo "\'cc\'e0\'f8\'e0";\par
+\cf1 //\'c2\'fb\'e1\'e8\'f0\'e0\'e5\'ec \'f2\'ee, \'f7\'f2\'ee \'ed\'e0\'f5\'ee\'e4\'e8\'f2\'f1\'ff \'e2 \'e1\'f3\'f4\'e5\'f0\'e5\par
+\cf3 $out3\cf4 = \cf3 ob_get_contents\cf4 ();\par
+\cf1 //\'ce\'f7\'e8\'f9\'e0\'e5\'ec \'e1\'f3\'f4\'e5\'f0 \'e8 \'e7\'e0\'ea\'f0\'fb\'e2\'e0\'e5\'ec \'e5\'e3\'ee\par
+\cf3 ob_end_clean\cf4 ();\par
+echo \cf3 $out1\cf4 ;\cf1 //Hello \par
+\cf4 echo \cf3 $out2\cf4 ;\cf1 //Hello World\par
+\pard\ri-448\sa200\sl276\slmult1\tx9088\cf4 echo \cf3 $out3\cf4 ;\cf1 //\'d1\'e0\'f8\'e0 \'e8 \'cc\'e0\'f8\'e0\par
+\cf7\f2\fs52\'d5\'fd\'f8\'e8\'f0\'ee\'e2\'e0\'ed\'e8\'e5 \cf4\lang1033\f0\fs26\par
+\pard\lang1049\f1 echo md5("password");\par
+\cf1 //5f4dcc3b5aa765d61d8327deb882cf99\par
+\cf4 echo \cf3 sha1\cf4 (\cf5 "password"\cf4 );\par
+\cf1 //5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8\par
+//\'c3\'e5\'ed\'e5\'f0\'e0\'f6\'e8\'ff \'f5\'fd\'f8\'e0 \'f1\'f1\'ee\'eb\'fc\'fe\par
+\cf3 $hash \cf4 = \cf3 crypt\cf4 (\cf5 "password"\cf4 , \cf5 '$1$password$'\cf4 );\par
+\cf1 //\'c3\'e5\'ed\'e5\'f0\'e0\'f6\'e8\'ff \'f1\'f2\'ee\'e9\'ea\'ee\'e3\'ee \'f5\'fd\'f8\'e0 \'f1\'ee \'f1\'eb\'f3\'f7\'e0\'e9\'ed\'ee\'e9 \'f1\'ee\'eb\'fc\'fe. \'d0\'e5\'ea\'ee\'ec\'e5\'ed\'e4\'f3\'e5\'f2\'f1\'ff.\par
+\cf3 $hash \cf4 = \cf3 password_hash\cf4 (\cf5 "password"\cf4 , \cf3 PASSWORD_BCRYPT\cf4 );\par
+\cf1 //\'cf\'f0\'ee\'e2\'e5\'f0\'ea\'e0 \'ef\'e0\'f0\'ee\'eb\'ff\par
+\cf4 if( \cf3 password_verify\cf4 (\cf5 "password"\cf4 , \cf3 $hash\cf4 ) )\par
+\pard\ri-448\sa200\sl276\slmult1\tx9088 echo "\'cf\'e0\'f0\'ee\'eb\'fc \'e2\'e5\'f0\'ed\'fb\'e9";\par
+\fs36\'d1\'e5\'e0\'ed\'f1\'fb \cf7\f2\fs52\'d3\'ef\'f0\'e0\'e2\'eb\'e5\'ed\'e8\'e5 \'f1\'e5\'e0\'ed\'f1\'e0\'ec\'e8 \par
+\pard\cf1\lang1033\f0\fs26 // \u1057?\u1086?\u1079?\u1076?\u1072?\u1085?\u1080?\u1077? \u1080?(\u1080?\u1083?\u1080?) \u1076?\u1086?\u1089?\u1090?\u1091?\u1087? \u1082? \u1089?\u1077?\u1089?\u1089?\u1080?\u1080?\par
+\cf3 session_start\cf4 ();\par
+\cf1 // \u1047?\u1072?\u1087?\u1080?\u1089?\u1100? \u1074? \u1089?\u1077?\u1089?\u1089?\u1080?\u1086?\u1085?\u1085?\u1091?\u1102? \u1087?\u1077?\u1088?\u1077?\u1084?\u1077?\u1085?\u1085?\u1091?\u1102?\par
+\cf3 $_SESSION\cf4 [\cf5 'name'\cf4 ] = \cf5 'John'\cf4 ;\par
+\cf1 // \u1063?\u1090?\u1077?\u1085?\u1080?\u1077? \u1080?\u1079? \u1089?\u1077?\u1089?\u1089?\u1080?\u1086?\u1085?\u1085?\u1086?\u1081? \u1087?\u1077?\u1088?\u1077?\u1084?\u1077?\u1085?\u1085?\u1086?\u1081?\par
+\cf4 echo\cf3 $_SESSION\cf4 [\cf5 'name'\cf4 ];\par
+\cf1 // \u1054?\u1095?\u1080?\u1089?\u1090?\u1082?\u1072? \u1089?\u1077?\u1089?\u1089?\u1080?\u1086?\u1085?\u1085?\u1099?\u1093? \u1087?\u1077?\u1088?\u1077?\u1084?\u1077?\u1085?\u1085?\u1099?\u1093?\par
+\cf3 session_destroy();\par
+\cf1 // \u1055?\u1088?\u1080?\u1085?\u1091?\u1076?\u1080?\u1090?\u1077?\u1083?\u1100?\u1085?\u1086?\u1077? \u1091?\u1076?\u1072?\u1083?\u1077?\u1085?\u1080?\u1077? \u1089?\u1077?\u1089?\u1089?\u1080?\u1086?\u1085?\u1085?\u1086?\u1081? cookie\par
+\pard\ri-448\sa200\sl276\slmult1\tx9088\cf3 setcookie\cf4 (\cf3 session_name\cf4 (), \cf3 session_id\cf4 (), \cf3 time\cf4 ()-\cf3 3600\cf4 );\par
+\pard\cf1 // session.auto_start = 0\par
+\cf3 ini_set\cf4 (\cf5 'session.name'\cf4 , \cf5 'PHPSESSID'\cf4 );\par
+\cf3 ini_set\cf4 (\cf5 'session.save_path'\cf4 , \cf5 ''\cf4 );\par
+\cf3 ini_set\cf4 (\cf5 'session.gc_maxlifetime'\cf4 , \cf5 '1440'\cf4 );\par
+\cf3 ini_set\cf4 (\cf5 'session.cookie_lifetime'\cf4 , \cf5 '0'\cf4 );\par
+\cf3 ini_set\cf4 (\cf5 'session.cookie_httponly'\cf4 , \cf5 ''\cf4 );\par
+\pard\ri-448\sa200\sl276\slmult1\tx9088\cf3 ini_set\cf4 (\cf5 'session.cookie_path'\cf4 , \cf5 '/'\cf4 );\par
+\cf0\lang1049\f3\fs22\'d4\'e0\'e9\'eb\'fb\par
+\pard\cf1\lang1033\f0\fs26 // \u1055?\u1088?\u1086?\u1074?\u1077?\u1088?\u1082?\u1072? \u1092?\u1072?\u1081?\u1083?\u1086?\u1074? \u1080? \u1076?\u1080?\u1088?\u1077?\u1082?\u1090?\u1086?\u1088?\u1080?\u1081? \u1085?\u1072? \u1089?\u1091?\u1097?\u1077?\u1089?\u1090?\u1074?\u1086?\u1074?\u1072?\u1085?\u1080?\u1077?\par
+\cf4 if( \cf3 file_exists\cf4 (\cf5 "file.txt"\cf4 ) )\{ \par
+\cf2 echo "\u1060?\u1072?\u1081?\u1083? \u1080?\u1083?\u1080? \u1076?\u1080?\u1088?\u1077?\u1082?\u1090?\u1086?\u1088?\u1080?\u1103? \u1089?\u1091?\u1097?\u1077?\u1089?\u1090?\u1074?\u1091?\u1077?\u1090?";\par
+\cf4\}\par
+if( \cf3 is_file\cf4 (\cf5 "file.txt"\cf4 ) )\{ \par
+\cf2 echo "\u1060?\u1072?\u1081?\u1083? \u1089?\u1091?\u1097?\u1077?\u1089?\u1090?\u1074?\u1091?\u1077?\u1090?";\par
+\cf4\}\par
+if( \cf3 is_dit\cf4 (\cf5 "images"\cf4 ) )\{ \par
+\cf2 echo "\u1044?\u1080?\u1088?\u1077?\u1082?\u1090?\u1086?\u1088?\u1080?\u1103? \u1089?\u1091?\u1097?\u1077?\u1089?\u1090?\u1074?\u1091?\u1077?\u1090?";\par
+\cf4\}\par
+\cf1 // \u1056?\u1072?\u1079?\u1084?\u1077?\u1088? \u1092?\u1072?\u1081?\u1083?\u1072?\par
+\cf4 echo \cf5 "\u1044?\u1083?\u1080?\u1085?\u1072? \u1092?\u1072?\u1081?\u1083?\u1072? file.txt: " \cf4 .\cf3 filesize\cf4 (\cf5 "file.txt"\cf4 );\par
+\cf1 // \u1042?\u1088?\u1077?\u1084?\u1103? \u1080?\u1079?\u1084?\u1077?\u1085?\u1077?\u1085?\u1080?\u1103? \u1080? \u1076?\u1086?\u1089?\u1090?\u1091?\u1087?\u1072? \u1082? \u1092?\u1072?\u1081?\u1083?\u1091?\par
+\cf4 echo \cf5 "\u1060?\u1072?\u1081?\u1083? file.txt\u1073?\u1099?\u1083? \u1080?\u1079?\u1084?\u1077?\u1085?\u1105?\u1085?: " \cf4 .\cf3 filemtime\cf4 (\cf5 "file.txt"\cf4 );\par
+echo \cf5 "\u1080? \u1079?\u1072?\u1087?\u1088?\u1086?\u1096?\u1077?\u1085?: " \cf4 .\cf3 fileatime\cf4 (\cf5 "file.txt"\cf4 );\par
+\cf1 // \u1063?\u1090?\u1086? \u1084?\u1086?\u1078?\u1085?\u1086? \u1089? \u1092?\u1072?\u1081?\u1083?\u1086?\u1084? \u1076?\u1077?\u1083?\u1072?\u1090?\u1100??\par
+\cf4 if( \cf3 is_readable\cf4 (\cf5 "file.txt"\cf4 ) )\{ \par
+\cf2 echo "\u1060?\u1072?\u1081?\u1083? \u1084?\u1086?\u1078?\u1085?\u1086? \u1095?\u1080?\u1090?\u1072?\u1090?\u1100?";\par
+\cf4\}\par
+if( \cf3 is_writable\cf4 (\cf5 "file.txt"\cf4 ) )\{ \par
+\cf2 echo "\u1042? \u1092?\u1072?\u1081?\u1083? \u1084?\u1086?\u1078?\u1085?\u1086? \u1087?\u1080?\u1089?\u1072?\u1090?\u1100?";\par
+\cf4\}\par
+if( \cf3 is_executable\cf4 (\cf5 "file.exe"\cf4 ) )\{ \par
+\cf2 echo "\u1060?\u1072?\u1081?\u1083? \u1084?\u1086?\u1078?\u1085?\u1086? \u1080?\u1089?\u1087?\u1086?\u1083?\u1085?\u1103?\u1090?\u1100?";\par
+\cf4\}\par
+\cf0\fs24\par
+\cf1\fs26 // \u1054?\u1090?\u1082?\u1088?\u1099?\u1090?\u1080?\u1077? \u1087?\u1086?\u1090?\u1086?\u1082?\u1072? \u1085?\u1072? \u1095?\u1090?\u1077?\u1085?\u1080?\u1077? \u1080? \u1087?\u1086?\u1083?\u1091?\u1095?\u1077?\u1085?\u1080?\u1077? \u1077?\u1075?\u1086? \u1076?\u1077?\u1089?\u1082?\u1088?\u1080?\u1087?\u1090?\u1086?\u1088?\u1072?\par
+\cf3 $f \cf4 = \cf3 fopen\cf4 (\cf5 "file.txt"\cf4 , \cf5 "r"\cf4 ) or \cf3 die\cf4 (\cf5 "\u1053?\u1077? \u1084?\u1086?\u1075?\u1091? \u1086?\u1090?\u1082?\u1088?\u1099?\u1090?\u1100? \u1092?\u1072?\u1081?\u1083?!"\cf4 );\par
+\cf1 // \u1047?\u1072?\u1082?\u1088?\u1099?\u1090?\u1080?\u1077? \u1087?\u1086?\u1090?\u1086?\u1082?\u1072?\par
+\cf3 fclose($f);\par
+\cf1 // \u1054?\u1090?\u1082?\u1088?\u1099?\u1090?\u1080?\u1077? \u1087?\u1086?\u1090?\u1086?\u1082?\u1072? \u1085?\u1072? \u1095?\u1090?\u1077?\u1085?\u1080?\u1077? \u1080? \u1079?\u1072?\u1087?\u1080?\u1089?\u1100?\par
+\cf3 $f \cf4 = \cf3 fopen\cf4 (\cf5 "file.txt"\cf4 , \cf5 "r+"\cf4 );\par
+\cf1 // \u1054?\u1090?\u1082?\u1088?\u1099?\u1090?\u1080?\u1077? \u1087?\u1086?\u1090?\u1086?\u1082?\u1072? \u1085?\u1072? \u1079?\u1072?\u1087?\u1080?\u1089?\u1100?. \u1059?\u1082?\u1072?\u1079?\u1072?\u1090?\u1077?\u1083?\u1100? \u1087?\u1086?\u1084?\u1077?\u1097?\u1072?\u1077?\u1090?\u1089?\u1103? \u1074? \u1082?\u1086?\u1085?\u1077?\u1094? \u1092?\u1072?\u1081?\u1083?\u1072?\par
+\cf3 $f \cf4 = \cf3 fopen\cf4 (\cf5 "file.txt"\cf4 , \cf5 "a"\cf4 );\par
+\cf1 // \u1054?\u1090?\u1082?\u1088?\u1099?\u1090?\u1080?\u1077? \u1087?\u1086?\u1090?\u1086?\u1082?\u1072? \u1085?\u1072? \u1095?\u1090?\u1077?\u1085?\u1080?\u1077? \u1080? \u1079?\u1072?\u1087?\u1080?\u1089?\u1100?. \u1059?\u1082?\u1072?\u1079?\u1072?\u1090?\u1077?\u1083?\u1100? \u1087?\u1086?\u1084?\u1077?\u1097?\u1072?\u1077?\u1090?\u1089?\u1103? \u1074? \u1082?\u1086?\u1085?\u1077?\u1094? \u1092?\u1072?\u1081?\u1083?\u1072?\par
+\cf3 $f \cf4 = \cf3 fopen\cf4 (\cf5 "file.txt"\cf4 , \cf5 "a+"\cf4 );\par
+\cf1 // \u1054?\u1090?\u1082?\u1088?\u1099?\u1090?\u1080?\u1077? \u1087?\u1086?\u1090?\u1086?\u1082?\u1072? \u1085?\u1072? \u1079?\u1072?\u1087?\u1080?\u1089?\u1100?. \u1060?\u1072?\u1081?\u1083? \u1086?\u1073?\u1088?\u1077?\u1079?\u1072?\u1077?\u1090?\u1089?\u1103? \u1076?\u1086? \u1085?\u1091?\u1083?\u1077?\u1074?\u1086?\u1081? \u1076?\u1083?\u1080?\u1085?\u1099?\par
+\cf3 $f \cf4 = \cf3 fopen\cf4 (\cf5 "file.txt"\cf4 , \cf5 "w"\cf4 );\par
+\cf1 // \u1054?\u1090?\u1082?\u1088?\u1099?\u1090?\u1080?\u1077? \u1087?\u1086?\u1090?\u1086?\u1082?\u1072? \u1085?\u1072? \u1095?\u1090?\u1077?\u1085?\u1080?\u1077? \u1080? \u1079?\u1072?\u1087?\u1080?\u1089?\u1100?. \u1060?\u1072?\u1081?\u1083? \u1086?\u1073?\u1088?\u1077?\u1079?\u1072?\u1077?\u1090?\u1089?\u1103? \u1076?\u1086? \u1085?\u1091?\u1083?\u1077?\u1074?\u1086?\u1081? \u1076?\u1083?\u1080?\u1085?\u1099?\par
+\cf3 $f \cf4 = \cf3 fopen\cf4 (\cf5 "file.txt"\cf4 , \cf5 "w+"\cf4 );\par
+\cf1 // \u1063?\u1080?\u1090?\u1072?\u1077?\u1084? \u1092?\u1072?\u1081?\u1083? \u1082?\u1091?\u1089?\u1082?\u1072?\u1084?\u1080?\par
+\cf3 $f \cf4 = \cf3 fopen\cf4 (\cf5 "file.txt"\cf4 , \cf5 "r"\cf4 );\par
+\cf1 // \u1063?\u1080?\u1090?\u1072?\u1077?\u1084? \u1087?\u1077?\u1088?\u1074?\u1099?\u1077? 5 \u1073?\u1072?\u1081?\u1090? \u1080?\u1079? \u1087?\u1086?\u1090?\u1086?\u1082?\u1072?\par
+\cf4 echo \cf3 fread\cf4 (\cf3 $f\cf4 , \cf3 5\cf4 );\par
+\cf1 // \u1063?\u1080?\u1090?\u1072?\u1077?\u1084? \u1089?\u1083?\u1077?\u1076?\u1091?\u1102?\u1097?\u1080?\u1077? 3 \u1073?\u1072?\u1081?\u1090?\u1072? \u1080?\u1079? \u1087?\u1086?\u1090?\u1086?\u1082?\u1072?\par
+\cf4 echo \cf3 fread\cf4 (\cf3 $f\cf4 , \cf3 3\cf4 );\par
+\cf1 //\u1042?\u1099?\u1074?\u1086?\u1076?\u1080?\u1084? \u1074?\u1089?\u1105? \u1089? \u1090?\u1077?\u1082?\u1091?\u1097?\u1077?\u1081? \u1087?\u1086?\u1079?\u1080?\u1094?\u1080?\u1080? \u1076?\u1086? \u1082?\u1086?\u1085?\u1094?\u1072?\par
+\cf3 fpassthru\cf4 (\cf3 $f\cf4 );\par
+\pard\ri-448\sa200\sl276\slmult1\tx9088\cf3 fclose($f);\par
+\pard\cf1 // \u1063?\u1080?\u1090?\u1072?\u1077?\u1084? \u1092?\u1072?\u1081?\u1083? \u1087?\u1086?\u1089?\u1090?\u1088?\u1086?\u1095?\u1085?\u1086? \u1074? \u1084?\u1072?\u1089?\u1089?\u1080?\u1074?\par
+\cf3 $f \cf4 = \cf3 fopen\cf4 (\cf5 "file.txt"\cf4 , \cf5 "r"\cf4 );\par
+\cf3 $lines \cf4 = [];\par
+while ( \cf3 $line \cf4 = \cf3 fgets\cf4 (\cf3 $f\cf4 ) )\{\par
+\cf3 $lines\cf4 []= \cf3 $line\cf4 ;\par
+\}\par
+\cf3 fclose($f);\par
+\cf1 // \u1063?\u1080?\u1090?\u1072?\u1077?\u1084? \u1092?\u1072?\u1081?\u1083? \u1087?\u1086?\u1089?\u1090?\u1088?\u1086?\u1095?\u1085?\u1086? \u1074? \u1084?\u1072?\u1089?\u1089?\u1080?\u1074?\u1080? \u1074?\u1099?\u1088?\u1077?\u1079?\u1072?\u1077?\u1084? html-\u1090?\u1101?\u1075?\u1080?, \u1086?\u1089?\u1090?\u1072?\u1074?\u1083?\u1103?\u1103? \u1085?\u1091?\u1078?\u1085?\u1099?\u1077?\par
+\cf3 $f \cf4 = \cf3 fopen\cf4 (\cf5 "file.html"\cf4 , \cf5 "r"\cf4 );\par
+\cf3 $lines \cf4 = [];\par
+while ( \cf3 $line \cf4 = \cf3 fgetss\cf4 (\cf3 $f\cf4 , \cf3 4096\cf4 , \cf5 "<p><br>"\cf4 ) )\{\par
+\cf3 $lines\cf4 []= \cf3 $line\cf4 ;\par
+\}\par
+\cf3 fclose($f);\par
+\cf1 // \u1063?\u1080?\u1090?\u1072?\u1077?\u1084? \u1092?\u1072?\u1081?\u1083? \u1087?\u1086?\u1073?\u1072?\u1081?\u1090?\u1086?\u1074?\u1086? \u1074? \u1084?\u1072?\u1089?\u1089?\u1080?\u1074?\par
+\cf3 $f \cf4 = \cf3 fopen\cf4 (\cf5 "file.txt"\cf4 , \cf5 "r"\cf4 );\par
+\pard\ri-448\sa200\sl276\slmult1\tx9088\cf3 $bytes \cf4 = [];\cf0\f4\fs22\par
+\pard\cf4\f0\fs26 while ( !\cf3 feof\cf4 (\cf3 $f) \cf4 )\{\par
+\}\par
+\cf3 fclose($f);\par
+\cf1 // \u1055?\u1080?\u1096?\u1077?\u1084? \u1092?\u1072?\u1081?\u1083?\par
+\cf3 $f \cf4 = \cf3 fopen\cf4 (\cf5 "file.txt"\cf4 , \cf5 "r+"\cf4 );\par
+\cf3 fwrite\cf4 (\cf3 $f\cf4 , \cf5 "\u1053?\u1086?\u1074?\u1099?\u1081? \u1090?\u1077?\u1082?\u1089?\u1090?"\cf4 , \cf3 25\cf4 );\par
+\cf3 fclose($f);\par
+\cf1 // \u1055?\u1080?\u1096?\u1077?\u1084? \u1074? \u1082?\u1086?\u1085?\u1077?\u1094? \u1092?\u1072?\u1081?\u1083?\u1072?\par
+\cf3 $f \cf4 = \cf3 fopen\cf4 (\cf5 "file.txt"\cf4 , \cf5 "a"\cf4 );\par
+\cf3 fputs\cf4 (\cf3 $f\cf4 , \cf5 "\\n\u1053?\u1086?\u1074?\u1072?\u1103? \u1089?\u1090?\u1088?\u1086?\u1082?\u1072?"\cf4 );\par
+\cf3 fclose($f);\par
+\cf1 // \u1063?\u1080?\u1090?\u1072?\u1077?\u1084? \u1087?\u1086?\u1089?\u1083?\u1077?\u1076?\u1085?\u1080?\u1077? 10 \u1073?\u1072?\u1081?\u1090? \u1080?\u1079? \u1087?\u1086?\u1090?\u1086?\u1082?\u1072?\par
+\cf3 $f \cf4 = \cf3 fopen\cf4 (\cf5 "file.txt"\cf4 , \cf5 "r"\cf4 );\par
+\cf1 // \u1059?\u1089?\u1090?\u1072?\u1085?\u1072?\u1074?\u1083?\u1080?\u1074?\u1072?\u1077?\u1084? \u1091?\u1082?\u1072?\u1079?\u1072?\u1090?\u1077?\u1083?\u1100? \u1074? \u1085?\u1091?\u1078?\u1085?\u1091?\u1102? \u1087?\u1086?\u1079?\u1080?\u1094?\u1080?\u1102?\par
+\cf3 fseek\cf4 (\cf3 $f\cf4 , -\cf3 10\cf4 , \cf3 SEEK_END\cf4 );\par
+\cf1 // \u1042? \u1082?\u1072?\u1082?\u1086?\u1081? \u1087?\u1086?\u1079?\u1080?\u1094?\u1080?\u1080? \u1084?\u1099? \u1085?\u1072?\u1093?\u1086?\u1076?\u1080?\u1084?\u1089?\u1103??\par
+\cf4 echo \cf3 ftell\cf4 (\cf3 $f\cf4 );\par
+\cf1 // \u1063?\u1080?\u1090?\u1072?\u1077?\u1084? \u1076?\u1072?\u1085?\u1085?\u1099?\u1077? \par
+\cf4 echo \cf3 fread\cf4 (\cf3 $f\cf4 , \cf3 10\cf4 );\par
+\cf1 // \u1059?\u1089?\u1090?\u1072?\u1085?\u1072?\u1074?\u1083?\u1080?\u1074?\u1072?\u1077?\u1084? \u1091?\u1082?\u1072?\u1079?\u1072?\u1090?\u1077?\u1083?\u1100? \u1074? \u1085?\u1072?\u1095?\u1072?\u1083?\u1086? \u1087?\u1086?\u1090?\u1086?\u1082?\u1072?\par
+\cf3 rewind($f);\par
+\pard\ri-448\sa200\sl276\slmult1\tx9088 fclose($f); \par
+\lang1049\f1\'cf\'f0\'ff\'ec\'e0\'ff \'f0\'e0\'e1\'ee\'f2\'e0 \'f1 \'f4\'e0\'e9\'eb\'ee\'ec\par
+\pard\cf1\lang1033\f0 // \u1063?\u1080?\u1090?\u1072?\u1077?\u1084? \u1074?\u1077?\u1089?\u1100? \u1092?\u1072?\u1081?\u1083? \u1085?\u1072?\u1087?\u1088?\u1103?\u1084?\u1091?\u1102? \u1074? \u1073?\u1091?\u1092?\u1077?\u1088? \u1074?\u1099?\u1074?\u1086?\u1076?\u1072?\par
+\cf3 readfile("file.txt");\par
+\cf1 // \u1063?\u1090?\u1086? \u1080?\par
+\cf3 $f \cf4 = \cf3 fopen\cf4 (\cf5 "file.txt"\cf4 , \cf5 "r"\cf4 );\par
+echo \cf3 fread\cf4 (\cf3 $f\cf4 , \cf3 filesize\cf4 (\cf5 "file.txt"\cf4 ));\par
+\cf3 fclose($f);\par
+\cf1 // \u1063?\u1080?\u1090?\u1072?\u1077?\u1084? \u1092?\u1072?\u1081?\u1083? \u1087?\u1086?\u1089?\u1090?\u1088?\u1086?\u1095?\u1085?\u1086? \u1074? \u1084?\u1072?\u1089?\u1089?\u1080?\u1074?\par
+\cf3 $lines \cf4 = \cf3 file\cf4 (\cf5 "file.txt"\cf4 );;\par
+\cf1 // \u1063?\u1090?\u1086? \u1080?\par
+\cf3 $f \cf4 = \cf3 fopen\cf4 (\cf5 "file.txt"\cf4 , \cf5 "r"\cf4 );\par
+while ( \cf3 $lines\cf4 []= \cf3 fgets\cf4 (\cf3 $f\cf4 ) );\par
+\cf3 fclose($f);\par
+\cf1 // \u1055?\u1086?\u1083?\u1091?\u1095?\u1072?\u1077?\u1084? \u1074?\u1077?\u1089?\u1100? \u1092?\u1072?\u1081?\u1083? \u1074? \u1074?\u1080?\u1076?\u1077? \u1089?\u1090?\u1088?\u1086?\u1082?\u1080?\par
+\cf3 $file \cf4 = \cf3 file_get_contents\cf4 (\cf5 "file.txt"\cf4 );\par
+\cf1 // \u1063?\u1090?\u1086? \u1080?\par
+\cf3 $f \cf4 = \cf3 fopen\cf4 (\cf5 "file.txt"\cf4 , \cf5 "r"\cf4 );\par
+\cf3 $file \cf4 = \cf3 fread\cf4 (\cf3 $f\cf4 , \cf3 filesize\cf4 (\cf5 "file.txt"\cf4 ));\par
+\cf3 fclose($f);\par
+\cf1 // \u1055?\u1080?\u1096?\u1077?\u1084? \u1074? \u1092?\u1072?\u1081?\u1083? \u1079?\u1072?\u1090?\u1080?\u1088?\u1072?\u1103? \u1089?\u1086?\u1076?\u1077?\u1088?\u1078?\u1080?\u1084?\u1086?\u1077?\par
+\cf3 file_put_contents\cf4 (\cf5 "file.txt"\cf4 , \cf5 "\u1053?\u1086?\u1074?\u1086?\u1077? \u1089?\u1086?\u1076?\u1077?\u1088?\u1078?\u1080?\u1084?\u1086?\u1077?"\cf4 );\par
+\cf1 // \u1063?\u1090?\u1086? \u1080?\par
+\cf3 $f \cf4 = \cf3 fopen\cf4 (\cf5 "file.txt"\cf4 , \cf5 "w"\cf4 );\par
+\cf3 fputs\cf4 (\cf3 $f\cf4 , \cf5 "\u1053?\u1086?\u1074?\u1086?\u1077? \u1089?\u1086?\u1076?\u1077?\u1088?\u1078?\u1080?\u1084?\u1086?\u1077?"\cf4 );\par
+\pard\ri-448\sa200\sl276\slmult1\tx9088\cf3 fclose($f);\par
+\pard\cf1 // \u1055?\u1080?\u1096?\u1077?\u1084? \u1074? \u1092?\u1072?\u1081?\u1083? \u1076?\u1086?\u1073?\u1072?\u1074?\u1083?\u1103?\u1103? \u1089?\u1086?\u1076?\u1077?\u1088?\u1078?\u1080?\u1084?\u1086?\u1077? \u1074? \u1082?\u1086?\u1085?\u1077?\u1094?\par
+\cf3 file_put_contents\cf4 (\cf5 "file.txt"\cf4 , \cf5 "\u1053?\u1086?\u1074?\u1086?\u1077? \u1089?\u1086?\u1076?\u1077?\u1088?\u1078?\u1080?\u1084?\u1086?\u1077?"\cf4 , \cf3 FILE_APPEND\cf4 );\par
+\cf1 // \u1063?\u1090?\u1086? \u1080?\par
+\cf3 $f \cf4 = \cf3 fopen\cf4 (\cf5 "file.txt"\cf4 , \cf5 "a"\cf4 );\par
+\cf3 fputs\cf4 (\cf3 $f\cf4 , \cf5 "\u1053?\u1086?\u1074?\u1086?\u1077? \u1089?\u1086?\u1076?\u1077?\u1088?\u1078?\u1080?\u1084?\u1086?\u1077?"\cf4 );\par
+\cf3 fclose($f);\par
+\cf0\fs24\par
+\cf1\fs26 // \u1050?\u1086?\u1087?\u1080?\u1088?\u1091?\u1077?\u1084? \u1092?\u1072?\u1081?\u1083?\par
+\cf3 copy\cf4 (\cf5 "source.txt"\cf4 , \cf5 "destination.txt"\cf4 );\par
+\cf1 // \u1055?\u1077?\u1088?\u1077?\u1080?\u1084?\u1077?\u1085?\u1086?\u1074?\u1099?\u1074?\u1072?\u1077?\u1084? \u1092?\u1072?\u1081?\u1083?\par
+\cf3 rename\cf4 (\cf5 "old.txt"\cf4 , \cf5 "new.txt"\cf4 );\par
+\cf1 // \u1059?\u1076?\u1072?\u1083?\u1103?\u1077?\u1084? \u1092?\u1072?\u1081?\u1083?\par
+\pard\ri-448\sa200\sl276\slmult1\tx9088\cf3 unlink\cf4 (\cf5 "file-to-delete.txt"\cf4 );\par
+\lang1049\f1\'d0\'e0\'e1\'ee\'f2\'e0 \'f1 \'e4\'e8\'f0\'e5\'ea\'f2\'ee\'f0\'e8\'ff\'ec\'e8\par
+\pard\cf1\lang1033\f0 // \u1057?\u1086?\u1079?\u1076?\u1072?\u1085?\u1080?\u1077? \u1076?\u1080?\u1088?\u1077?\u1082?\u1090?\u1086?\u1088?\u1080?\u1080?\par
+\cf3 mkdir("newdir");\par
+\cf1 // \u1059?\u1076?\u1072?\u1083?\u1077?\u1085?\u1080?\u1077? \u1076?\u1080?\u1088?\u1077?\u1082?\u1090?\u1086?\u1088?\u1080?\u1080?\par
+\cf3 rmdir\cf4 (\cf5 "dir-to-delete"\cf4 );\par
+\cf1 // \u1048?\u1084?\u1103? \u1090?\u1077?\u1082?\u1091?\u1097?\u1077?\u1081? \u1076?\u1080?\u1088?\u1077?\u1082?\u1090?\u1086?\u1088?\u1080?\u1080?\par
+\cf4 echo getcwd();\par
+\cf1 // \u1047?\u1072?\u1093?\u1086?\u1076?\u1080?\u1084? \u1074? \u1090?\u1077?\u1082?\u1091?\u1097?\u1091?\u1102? \u1076?\u1080?\u1088?\u1077?\u1082?\u1090?\u1086?\u1088?\u1080?\u1102?\par
+\cf3 $dir \cf4 = \cf3 opendir\cf4 (\cf5 "."\cf4 );\par
+\cf1 // \u1063?\u1080?\u1090?\u1072?\u1077?\u1084? \u1089?\u1086?\u1076?\u1077?\u1088?\u1078?\u1080?\u1084?\u1086?\u1077? \u1076?\u1080?\u1088?\u1077?\u1082?\u1090?\u1086?\u1088?\u1080?\u1080?\par
+\cf4 while ( \cf3 $name \cf4 = \cf3 readdir\cf4 (\cf3 $dir\cf4 ) )\{\par
+if(\cf3 is_dir\cf4 (\cf3 $name\cf4 ))\par
+echo \cf5 '[' \cf4 . \cf3 $name \cf4 . \cf5 ']<br>'\cf4 ;\par
+else\par
+echo \cf3 $name \cf4 . \cf5 '<br>'\cf4 ;\par
+\}\par
+\cf1 //\u1042?\u1099?\u1093?\u1086?\u1076?\u1080?\u1084? \u1080?\u1079? \u1076?\u1080?\u1088?\u1077?\u1082?\u1090?\u1086?\u1088?\u1080?\u1080?\par
+\cf3 closedir($dir);\par
+\cf1 // \u1063?\u1080?\u1090?\u1072?\u1077?\u1084? \u1089?\u1086?\u1076?\u1077?\u1088?\u1078?\u1080?\u1084?\u1086?\u1077? \u1076?\u1080?\u1088?\u1077?\u1082?\u1090?\u1086?\u1088?\u1080?\u1080?\u1074? \u1084?\u1072?\u1089?\u1089?\u1080?\u1074?\par
+\cf3 $dir_content \cf4 = \cf3 scandir\cf4 (\cf5 "."\cf4 );\par
+\cf1 // \u1063?\u1080?\u1090?\u1072?\u1077?\u1084? \u1086?\u1087?\u1088?\u1077?\u1076?\u1077?\u1083?\u1105?\u1085?\u1085?\u1086?\u1077? \u1089?\u1086?\u1076?\u1077?\u1088?\u1078?\u1080?\u1084?\u1086?\u1077? \u1076?\u1080?\u1088?\u1077?\u1082?\u1090?\u1086?\u1088?\u1080?\u1080?\u1074? \u1084?\u1072?\u1089?\u1089?\u1080?\u1074?\par
+\pard\ri-448\sa200\sl276\slmult1\tx9088\cf3 $dir_txt_content \cf4 = \cf3 glob\cf4 (\cf5 "*.txt"\cf4 );\cf0\f4\fs22\par
+}
+ 
