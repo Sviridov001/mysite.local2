@@ -1,0 +1,12 @@
+1511805168|index|test
+1511805170|index|index.php
+1511805172|contact|index.php
+1511805173|about|index.php?id=contact
+1511805176|info|index.php?id=about
+1511805184|index|index.php
+1511805185|log|index.php
+1511805202|log|index.php?id=log
+1511805204|index|index.php?id=log
+1511805205|log|index.php
+1511805206|log|index.php?id=log
+1511805207|log|index.php?id=log
