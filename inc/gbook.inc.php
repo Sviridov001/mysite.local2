@@ -20,6 +20,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $name = clearStr($_POST['name']);
     $email = clearStr($_POST['email']);
     $msg = clearStr($_POST['msg']);
+    $sql = "INSERT INTO msgs (name, email,msg) VALUE ('$name', '$email', '$msg' )";
+    mysqli_query($link, $sql);
+    header("Location: ". $_SERVER["REQUEST_URI"]);
+    exit;
+
 }
 
 /* Сохранение записи в БД */
@@ -42,6 +47,29 @@ Email: <br /><input type="text" name="email" /><br />
 </form>
 <?php
 /* Вывод записей из БД */
+
+$sql = "SELECT id, name, email, msg,
+                UNIX_TIMESTAMP(datetime) as dt
+                FROM msgs ORDER BY id DESC";
+$res = mysqli_query($link, $sql);
+$tmp = mysqli_num_rows($res);
+echo "<p>Всего записей в гостевой книге: $tmp";
+while($row = mysqli_fetch_assoc($res)){
+    $dt = date("d-m-Y H:i:s", $row["dt"]);
+    $msg = nl2br($row['msg']);
+    echo <<<MSG
+    <p>
+        <a href="{$row['email']}">{$row['name']}</a>
+        {$dt} написал <br/>{$msg}
+    </p>
+    <p align="right">
+        <a href="{$_SERVER['REQUEST_URI']}&del={$row['id']}">Удалить</a>
+    </p>
+
+MSG;
+
+}
+
 
 /* Вывод записей из БД */
 ?>

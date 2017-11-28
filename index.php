@@ -1,8 +1,9 @@
-<?php 
+<?php
+  ob_start();
   include 'inc/headers.inc.php';
 
-define(PATH_LOG, 'path.log');
-    include 'inc/log.inc.php';
+  define(PATH_LOG, 'path.log');
+  include 'inc/log.inc.php';
 
   //const PATH_LOG = 'path.log';
 ?>
