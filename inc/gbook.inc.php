@@ -1,9 +1,26 @@
 <?php
 /* Основные настройки */
-
+const DB_HOST = "localhost";
+const DB_LOGIN = "root";
+const DB_PASSWORD = "";
+const DB_NAME = "gbook";
+$link = mysqli_connect(DB_HOST, DB_LOGIN, DB_PASSWORD, DB_NAME) or die(mysqli_connect_error());
+/*if(!$link){
+    echo 'Ошибка: '. mysqli_connect_errno()
+        . ' : '. mysqli_connect_error();
+}*/
 /* Основные настройки */
-
+function clearStr($data){
+    global $link;
+    $data = trim(strip_tags($data));
+    return mysqli_real_escape_string($link, $data);
+}
 /* Сохранение записи в БД */
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $name = clearStr($_POST['name']);
+    $email = clearStr($_POST['email']);
+    $msg = clearStr($_POST['msg']);
+}
 
 /* Сохранение записи в БД */
 
