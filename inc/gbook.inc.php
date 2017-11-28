@@ -16,20 +16,31 @@ function clearStr($data){
     return mysqli_real_escape_string($link, $data);
 }
 /* Сохранение записи в БД */
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+/*if($_SERVER["REQUEST_METHOD"] == "POST"){
     $name = clearStr($_POST['name']);
     $email = clearStr($_POST['email']);
     $msg = clearStr($_POST['msg']);
-    $sql = "INSERT INTO msgs (name, email,msg) VALUE ('$name', '$email', '$msg' )";
+    $sql = "INSERT INTO msgs (name,email,msg) VALUE ('$name','$email','$msg')";
     mysqli_query($link, $sql);
     header("Location: ". $_SERVER["REQUEST_URI"]);
     exit;
 
 }
-
+*/
 /* Сохранение записи в БД */
 
 /* Удаление записи из БД */
+if(isset($_GET["del"])){
+    $id = abs((int)$_GET['del']);
+    if($id){
+        $sql = "DELETE FROM WHERE id = $id";
+        mysqli_query($link, $sql);
+        header("Location: ". $_SERVER["REQUEST_URI"]);
+        exit;
+
+    }
+
+}
 
 /* Удаление записи из БД */
 ?>
