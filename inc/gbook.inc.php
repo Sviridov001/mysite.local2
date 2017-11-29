@@ -5,10 +5,7 @@ const DB_LOGIN = "root";
 const DB_PASSWORD = "";
 const DB_NAME = "gbook";
 $link = mysqli_connect(DB_HOST, DB_LOGIN, DB_PASSWORD, DB_NAME) or die(mysqli_connect_error());
-/*if(!$link){
-    echo 'Ошибка: '. mysqli_connect_errno()
-        . ' : '. mysqli_connect_error();
-}*/
+
 /* Основные настройки */
 function clearStr($data){
     global $link;
@@ -16,7 +13,7 @@ function clearStr($data){
     return mysqli_real_escape_string($link, $data);
 }
 /* Сохранение записи в БД */
-/*if($_SERVER["REQUEST_METHOD"] == "POST"){
+if($_SERVER["REQUEST_METHOD"] == "POST"){
     $name = clearStr($_POST['name']);
     $email = clearStr($_POST['email']);
     $msg = clearStr($_POST['msg']);
@@ -26,20 +23,19 @@ function clearStr($data){
     exit;
 
 }
-*/
+
 /* Сохранение записи в БД */
 
 /* Удаление записи из БД */
 if(isset($_GET["del"])){
     $id = abs((int)$_GET['del']);
+    echo '========='.$id;
     if($id){
-        $sql = "DELETE FROM WHERE id = $id";
+        $sql = "DELETE FROM msgs WHERE id = $id";
         mysqli_query($link, $sql);
-        header("Location: ". $_SERVER["REQUEST_URI"]);
-        exit;
-
+      /*  header("Location: ". $_SERVER["REQUEST_URI"]);
+        exit;*/
     }
-
 }
 
 /* Удаление записи из БД */
@@ -59,9 +55,7 @@ Email: <br /><input type="text" name="email" /><br />
 <?php
 /* Вывод записей из БД */
 
-$sql = "SELECT id, name, email, msg,
-                UNIX_TIMESTAMP(datetime) as dt
-                FROM msgs ORDER BY id DESC";
+$sql = "SELECT id, name, email, msg, UNIX_TIMESTAMP(datetime) as dt FROM msgs ORDER BY id DESC";
 $res = mysqli_query($link, $sql);
 $tmp = mysqli_num_rows($res);
 echo "<p>Всего записей в гостевой книге: $tmp";
