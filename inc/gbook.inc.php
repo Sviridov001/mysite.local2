@@ -29,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 /* Удаление записи из БД */
 if(isset($_GET["del"])){
     $id = abs((int)$_GET['del']);
-    echo '========='.$id;
+    echo 'Удалена запись - '.$id;
     if($id){
         $sql = "DELETE FROM msgs WHERE id = $id";
         mysqli_query($link, $sql);
@@ -58,7 +58,7 @@ Email: <br /><input type="text" name="email" /><br />
 $sql = "SELECT id, name, email, msg, UNIX_TIMESTAMP(datetime) as dt FROM msgs ORDER BY id DESC";
 $res = mysqli_query($link, $sql);
 $tmp = mysqli_num_rows($res);
-echo "<p>Всего записей в гостевой книге: $tmp";
+echo "<p>Всего записей в гостевой книге: $tmp </p>";
 while($row = mysqli_fetch_assoc($res)){
     $dt = date("d-m-Y H:i:s", $row["dt"]);
     $msg = nl2br($row['msg']);
